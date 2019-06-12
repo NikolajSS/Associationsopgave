@@ -9,8 +9,11 @@
 class Screen
 {
 public:
-    Screen();
-    void showApps(std::list<App> apps);
+    Screen(string type);
+
+    void showApps(std::list<App*> apps);
+private:
+    string type_;
 };
 
 #endif // SCREEN_H

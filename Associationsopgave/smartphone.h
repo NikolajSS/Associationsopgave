@@ -14,12 +14,14 @@ public:
     SmartPhone(Screen screen1);//constructor
     void setScreen(Screen*);
     void setApps(std::list<App> apps);
-    void addApp(App app);
-    void removeApp(App app);
+    void addApp(App* app);
+    void removeApp(App* app);
     void openApp(App app);
     void showAllApps();
+    static void test();
+
 private:
-    std::list<App> _apps;
+    std::list<App*> _apps;
     Screen* _sc;
 };
 
